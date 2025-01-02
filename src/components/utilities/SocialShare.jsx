@@ -1,29 +1,52 @@
 import Link from 'next/link';
 import React from 'react';
 
-const SocialShare = () => {
+const SocialShare = ({ contact }) => {
+    // console.log(con)
     return (
         <>
-            <li>
-                <Link className="facebook" href="https://www.facebook.com/" target="_blank">
-                    <i className="fab fa-facebook-f"></i>
-                </Link>
-            </li>
-            <li>
-                <Link className="twitter" href="https://twitter.com/" target="_blank">
-                    <i className="fab fa-twitter"></i>
-                </Link>
-            </li>
-            <li>
-                <Link className="https://pinterest.com/" href="https://www.pinterest.com/" target="_blank">
-                    <i className="fab fa-pinterest-p"></i>
-                </Link>
-            </li>
-            <li>
-                <Link className="linkedin" href="https://www.linkedin.com/" target="_blank">
-                    <i className="fab fa-linkedin-in"></i>
-                </Link>
-            </li>
+            {contact?.telegramLink && (
+                <li className="facebook">
+                    <Link href={contact?.telegramLink} target="_blank">
+                        <i className="fab fa-telegram"></i>
+                    </Link>
+                </li>
+            )}
+            {contact?.facebookLink && (
+                <li className="facebook">
+                    <Link href={contact?.facebookLink} target="_blank">
+                        <i className="fab fa-facebook-f"></i>
+                    </Link>
+                </li>
+            )}
+            {contact?.twitterLink && (
+                <li className="facebook">
+                    <Link href={contact?.twitterLink} target="_blank">
+                        <i className="fab fa-twitter"></i>
+                    </Link>
+                </li>
+            )}
+            {contact?.instagramLink && (
+                <li className="facebook">
+                    <Link href={contact?.instagramLink} target="_blank">
+                        <i className="fab fa-instagram"></i>
+                    </Link>
+                </li>
+            )}
+            {contact?.linkedInLink && (
+                <li className="facebook">
+                    <Link href={contact?.linkedInLink} target="_blank">
+                        <i className="fab fa-linkedin-in"></i>
+                    </Link>
+                </li>
+            )}
+            {contact?.tiktokLink && (
+                <li className="facebook">
+                    <Link href={contact?.tiktokLink} target="_blank">
+                        <i className="fab fa-tiktok"></i>
+                    </Link>
+                </li>
+            )}
         </>
     );
 };

@@ -40,7 +40,7 @@ const HeaderTopStyle1 = () => {
                         <div className="col-xl-3 col-lg-4 text-end">
                             <div className="social">
                                 <ul>
-                                    <SocialShare />
+                                    <SocialShare contact={contact} />
                                 </ul>
                             </div>
                         </div>
