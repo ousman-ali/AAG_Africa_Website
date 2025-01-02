@@ -58,7 +58,7 @@ const Blog = () => {
                             <nav aria-label="navigation">
                                 {totalPages > 1 && (
                                     <ul className="pagination">
-                                        <li className="page-item"><Link className="page-link" href="#" onClick={() => handleSmoothScroll(currentPage-1)}><i className="fas fa-angle-double-left"></i></Link></li>
+                                        <li className="page-item"><Link className="page-link" href="#" onClick={() => handleSmoothScroll((currentPage != 1) ? currentPage - 1 : currentPage)}><i className="fas fa-angle-double-left"></i></Link></li>
                                         {Array.from({ length: totalPages }, (_, index) => (
                                             <li className={`page-item ${currentPage === index + 1 ? "active" : ""}`} >
                                                 <Link href="#" className="page-link"
@@ -70,7 +70,7 @@ const Blog = () => {
                                                 </Link>
                                             </li>
                                         ))}
-                                        <li className="page-item"><Link className="page-link" href="#" onClick={() => handleSmoothScroll(currentPage+1)}><i className="fas fa-angle-double-right"></i></Link></li>
+                                        <li className="page-item"><Link className="page-link" href="#" onClick={() => handleSmoothScroll((currentPage < totalPages) ? currentPage + 1 : totalPages)}><i className="fas fa-angle-double-right"></i></Link></li>
                                     </ul>
                                 )}
                             </nav>
