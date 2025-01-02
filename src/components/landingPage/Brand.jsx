@@ -10,12 +10,12 @@ import Image from 'next/image';
 const Brand = ({ sectionClass }) => {
     return (
         <>
-            <div className={`partner-style-one-area ${sectionClass ? sectionClass : ""}`}>
+            <div className={`partner-style-one-area default-padding ${sectionClass ? sectionClass : ""}`}>
                 <div className="container">
                     <div className="row align-center">
                         <div className="col-lg-5">
                             <div className="partner-map" style={{ backgroundImage: `url(/assets/img/shape/map.png)` }}>
-                                <h2 className="mask-text" style={{ backgroundImage: `url(/assets/img/banner/10.jpg)` }}>22</h2>
+                                <h2 className="mask-text" style={{ backgroundImage: `url(/assets/img/brand.jpg)` }}>22</h2>
                                 <h4>Partners in world wide</h4>
                             </div>
                         </div>

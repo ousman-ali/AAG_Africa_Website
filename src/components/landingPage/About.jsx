@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
-import anim1Thumb from '@/assets/img/shape/anim-1.png'
-import anim2Thumb from '@/assets/img/shape/anim-2.png'
+
 import anim3Thumb from '@/assets/img/shape/anim-3.png'
 import anim4Thumb from '@/assets/img/shape/anim-4.png'
 import aboutThumb from "@/assets/img/about/1.jpg"
-import signatureThumb from "@/assets/img/signature.png"
+
 import About1Card from './About1Card';
 
 const About = () => {

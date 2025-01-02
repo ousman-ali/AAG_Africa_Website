@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "bgThumb": "1.jpg",
+        "bgThumb": "21.jpg",
         "title": "Meet Consulting",
         "title1": "Financial Analysis",
         "title2": "Developing Meeting.",
@@ -11,7 +11,56 @@
     },
     {
         "id": 2,
-        "bgThumb": "6.jpg",
+        "bgThumb": "22.jpg",
+        "title": "Coaching & Consulting",
+        "title1": "Strategies for",
+        "title2": "Enduring Success",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 3,
+        "bgThumb": "23.jpg",
+        "title": "Coaching & Consulting",
+        "title1": "Strategies for",
+        "title2": "Enduring Success",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 4,
+        "bgThumb": "24.jpg",
+        "title": "Coaching & Consulting",
+        "title1": "Strategies for",
+        "title2": "Enduring Success",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 5,
+        "bgThumb": "25.jpg",
+        "title": "Coaching & Consulting",
+        "title1": "Strategies for",
+        "title2": "Enduring Success",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 6,
+        "bgThumb": "26.jpg",
+        "title": "Coaching & Consulting",
+        "title1": "Strategies for",
+        "title2": "Enduring Success",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },  {
+        "id": 7,
+        "bgThumb": "27.jpg",
         "title": "Coaching & Consulting",
         "title1": "Strategies for",
         "title2": "Enduring Success",

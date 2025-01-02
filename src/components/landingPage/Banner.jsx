@@ -13,7 +13,7 @@ const Banner = () => {
                     <Swiper
                         modules={[Keyboard, Autoplay, Pagination, EffectFade]}
                         direction={"horizontal"}
-                        autoplay={false}
+                        autoplay={true}
                         loop={true}
                         effect={"fade"}
                         fadeEffect={{
