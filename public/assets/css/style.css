@@ -7725,6 +7725,12 @@ form.seo-form input:-moz-placeholder {
 	z-index: 1;
 }
 
+.services-style-two .thumb img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+}
+
 .services-style-two .thumb .title {
 	position: absolute;
 	left: 0;
