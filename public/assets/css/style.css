@@ -5672,6 +5672,12 @@ p {
 	margin-bottom: 20px;
 }
 
+.team-style-one .thumb img{
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
+}
+
 .team-style-one .thumb .social {
 	position: absolute;
 	left: -80px;

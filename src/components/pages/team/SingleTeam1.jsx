@@ -8,18 +8,18 @@ const SingleTeam1 = ({ team }) => {
 
     return (
         <>
-            <div className={`team-style-one ${activeClass}`}>
+            <div className={`team-style-one`}>
                 <div className="thumb">
-                    <Image src={`/assets/img/team/${memberThumb}`} width={800} height={800} alt="Image Not Found" />
+                    <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${team.image}`} width={800} height={800} alt="Image Not Found" />
                     <div className="social">
                         <ul>
-                            <SocialShareStyle3 />
+                            <SocialShareStyle3 Links = {team} />
                         </ul>
                     </div>
                 </div>
                 <div className="info">
-                    <span>{designation}</span>
-                    <h4><Link href={`/team-details/${id}`}>{name}</Link></h4>
+                    <span>{team.position}</span>
+                    <h4><Link href="#">{team.full_name}</Link></h4>
                 </div>
             </div>
         </>
