@@ -7,7 +7,7 @@ const TeamPage = () => {
     return (
         <>
             <BreadCrumb breadCrumb="team" title="Team Members" />
-                <Team fullTeam={true} sectionClass="bg-gray" />
+                <Team sectionClass="bg-gray" />
             
         </>
     );
