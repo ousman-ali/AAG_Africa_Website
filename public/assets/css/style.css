@@ -4992,9 +4992,9 @@ p {
     # Services Details
 =================================================================== */
 
-.services-details-area .thumb img {
+/* .services-details-area .thumb img {
 	margin-bottom: 40px;
-}
+} */
 
 .services-details-area h1,
 .services-details-area h2,
@@ -5670,6 +5670,12 @@ p {
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 20px;
+}
+
+.team-style-one .thumb img{
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .team-style-one .thumb .social {
@@ -7723,6 +7729,12 @@ form.seo-form input:-moz-placeholder {
 .services-style-two .thumb {
 	position: relative;
 	z-index: 1;
+}
+
+.services-style-two .thumb img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .services-style-two .thumb .title {

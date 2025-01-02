@@ -13,6 +13,6 @@ export default {
     },
 
     images: {
-        domains: ['api.nascontradingplc.com'], // Add 'localhost' for local development
+        domains: ['127.0.0.1'], // Add 'localhost' for local development
     },
 };
