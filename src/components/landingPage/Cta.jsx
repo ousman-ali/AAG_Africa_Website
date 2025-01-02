@@ -11,7 +11,7 @@ const Cta = () => {
 
     return (
         <>
-            <div className="request-call-back-area secondary text-light default-padding" style={{ backgroundImage: `url(/assets/img/banner/1.jpg)` }}>
+            <div className="request-call-back-area secondary text-light default-padding" style={{ backgroundImage: `url(/assets/img/cta.jpg)` }}>
                 <div className="container">
                     <div className="row align-center">
                         <div className="col-lg-6">
