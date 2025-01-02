@@ -1,11 +1,31 @@
 "use client"
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Project3Data from '@/assets/jsonData/project/Project3Data.json'
 import SingleProject3 from './SingleProject3';
 import { PhotoProvider } from 'react-photo-view';
+import axios from 'axios';
 
 const Product = () => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products-list`);
+                setProducts(data.slice(0, 3));
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <>
             <div className="project-style-three-area default-padding">
@@ -30,7 +50,7 @@ const Product = () => {
                                             speed={() => 800}
                                             easing={(type) => (type === 2 ? 'cubic-bezier(0.36, 0, 0.66, -0.56)' : 'cubic-bezier(0.34, 1.56, 0.64, 1)')}
                                         >
-                                            {Project3Data.map(project =>
+                                            {products.map(project =>
                                                 <SingleProject3 project={project} key={project.id} />
                                             )}
                                         </PhotoProvider>

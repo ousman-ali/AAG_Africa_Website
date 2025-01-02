@@ -6602,6 +6602,12 @@ p {
 	z-index: 1;
 }
 
+.gallery-style-three .thumb img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+}
+
 .gallery-style-three .thumb .item.popup-gallery {
 	position: absolute;
 	left: 50%;
@@ -8357,6 +8363,9 @@ form.seo-form input:-moz-placeholder {
 }
 
 .blog-style-one .thumb img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
 	margin-bottom: 30px;
 	border-radius: 5px;
 }

@@ -11,19 +11,19 @@ const SingleProject3 = ({ project }) => {
             <div className="gallery-item">
                 <div className="gallery-style-three">
                     <div className="thumb">
-                        <Image src={`/assets/img/gallery/${thumb}`} width={800} height={600} alt="Thumb" />
+                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${project.banner}`} width={800} height={200} alt="Thumb" />
                         <Link href="#" className="item popup-gallery" scroll={false}>
-                            <PhotoView src={`/assets/img/gallery/${thumb}`} alt="image">
+                            <PhotoView src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${project.banner}`} alt="image">
                                 <span>
-                                    <i className={icon}></i>
+                                    <i className="fas fa-plus"></i>
                                 </span>
                             </PhotoView>
                         </Link>
                     </div>
                     <div className="overlay">
                         <div className="content">
-                            <span>{tags}</span>
-                            <h4><Link href="#">{title}</Link></h4>
+                            {/* <span>{tags}</span> */}
+                            <h4><Link href="#">{project.title}</Link></h4>
                         </div>
                     </div>
                 </div>
