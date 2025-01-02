@@ -3,23 +3,32 @@ import Link from 'next/link';
 import React from 'react';
 
 const SingleServices4 = ({ service }) => {
-    const { id, title, text, icon, btnText, thumb } = service
+    const { id, thumb, title, icon, text, btnText } = service
+    const truncateText = (text, maxLength) => {
+        if (text.length > maxLength) {
+            return text.slice(0, maxLength) + "...";
+        }
+        return text;
+    };
 
     return (
         <>
-            <div className="service-style-four">
-                <div className="info">
-                    <h4><Link href={`/services-details/${id}`}>{title}</Link></h4>
-                    <p>{text}</p>
-                    <div className="icon">
-                        <div className="thumb">
-                            <Image src={`/assets/img/icon/${icon}`} width={256} height={256} alt="Image Not Found" />
-                        </div>
-                        <Link href={`/services-details/${id}`} className="link">{btnText} <i className="fas fa-arrow-right"></i></Link>
+            <div className="services-style-two active">
+                <div className="thumb">
+                    <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${service.banner}`} width={800} height={600} alt="Thumb" />
+                    <div className="title">
+                        <Link href={`/services-details/${service.slug}`}>
+
+                            <h4>{service.serviceName}</h4>
+                        </Link>
                     </div>
                 </div>
-                <div className="thumb">
-                    <Image src={`/assets/img/service/${thumb}`} alt="Image Not Found" width={800} height={600} />
+                <div className="info">
+                    <p dangerouslySetInnerHTML={{ __html: truncateText(service.description, 120) }} />
+                    <div className="button">
+                        <Link href={`/services-details/${service.slug}`}>Read more</Link>
+                        <div className="devider"></div>
+                    </div>
                 </div>
             </div>
         </>

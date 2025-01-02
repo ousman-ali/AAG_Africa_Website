@@ -9,23 +9,23 @@ const SingleTestimonial2 = ({ testimonial }) => {
         <>
             <div className="swiper-slide">
                 <div className="testimonial-style-two">
-                    <Image src={`/assets/img/shape/${quoteThumb}`} width={135} height={121} alt="Quote" />
+                    <Image src={`/assets/img/shape/quote.png`} width={135} height={121} alt="Quote" />
                     <div className="top-info">
-                        <h3>{title}</h3>
+                        <h3>{testimonial.name}</h3>
                         <div className="testimonial-rating">
-                            <RatingsStar ratings={ratings} />
+                            <RatingsStar ratings={4.5} />
                         </div>
                     </div>
                     <div className="info">
-                        <p>{text}</p>
+                        <p dangerouslySetInnerHTML={{ __html: testimonial.description }} />
                     </div>
                     <div className="provider">
                         <div className="content">
-                            <h4>{name}</h4>
-                            <span>{location}</span>
+                            <h4>{testimonial.name}</h4>
+                            <span>{testimonial.role}</span>
                         </div>
                         <div className="thumb">
-                            <Image src={`/assets/img/logo/${logo}`} width={129} height={37} alt="Logo" />
+                            <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${testimonial.banner}`} width={67} height={37} alt="Logo" />
                         </div>
                     </div>
                 </div>

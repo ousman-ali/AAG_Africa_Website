@@ -1,8 +1,30 @@
-import React from 'react';
-import Services4Data from '@/assets/jsonData/services/Services4Data.json'
+"use client"
+import React, { useEffect, useState } from 'react';
 import SingleServices4 from './SingleServices4';
+import axios from 'axios';
 
 const Service = () => {
+
+    const [serviceData, setServiceData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(
+                    `${process.env.NEXT_PUBLIC_API_URL}/api/service`
+                );
+                setServiceData(data);
+            } catch (error) {
+                console.error("Error fetching service data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <>
             <div className="services-style-four-area bg-gray default-padding bottom-less">
@@ -18,7 +40,7 @@ const Service = () => {
                 </div>
                 <div className="container">
                     <div className="row">
-                        {Services4Data.map(service =>
+                        {serviceData.slice(-3).map(service =>
                             <div className="col-xl-4 col-md-6 mb-30" key={service.id}>
                                 <SingleServices4 service={service} />
                             </div>
