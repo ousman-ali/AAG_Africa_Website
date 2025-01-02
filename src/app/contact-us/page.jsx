@@ -1,7 +1,7 @@
 
 import BreadCrumb from '@/components/breadCrumb/BreadCrumb';
-import ContactMap from '@/components/contact/ContactMap';
-import ContactStyle1 from '@/components/contact/ContactStyle1';
+import ContactMap from '@/components/pages/contacts/ContactMap';
+import ContactStyle1 from '@/components/pages/contacts/ContactStyle1';
 
 import React from 'react';
 
