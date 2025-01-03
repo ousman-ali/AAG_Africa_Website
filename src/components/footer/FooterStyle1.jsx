@@ -1,13 +1,39 @@
+"use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import shape7 from '@/assets/img/shape/7.png';
 import shape9 from '@/assets/img/shape/9.png';
 import logoLight from '@/assets/img/logo-light.png';
 import Link from 'next/link';
 import SocialShare from '../utilities/SocialShare';
+import axios from 'axios';
 import FooterNewsLetter from '../form/FooterNewsLetter';
 
 const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
+
+    const [service, setService] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [contact, setContact] = useState({});
+
+    useEffect(() => {
+        const fetchServiceDetails = async () => {
+            try {
+
+                const [contactData, serviceData] = await Promise.all([
+                    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/business-setup`),
+                    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/service`)
+                ]);
+                setContact(contactData.data);
+                setService(serviceData.data);
+            } catch (error) {
+                console.error("Error fetching services data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchServiceDetails();
+    }, []);
     return (
         <>
             <footer className="bg-dark text-light">
@@ -73,34 +99,24 @@ const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
                                 <div className="f-item link">
                                     <h4 className="widget-title">Our Services</h4>
                                     <ul>
-                                        <li>
-                                            <Link href="/services-details/1">Manage investment</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/services-details/1">Business planning</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/services-details/1">Financial advices</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/services-details/1">Tax strategy</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/services-details/1">Insurance strategy</Link>
-                                        </li>
+                                        {service.slice(-5).map((service)=>(
+                                            <li>
+                                                <Link href={`/services-details${service.slug}`}>{service.serviceName}</Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 footer-item">
-                                <h4 className="widget-title">Newsletter</h4>
+                                <h4 className="widget-title">Contact Us</h4>
                                 <p>
                                     Join our subscribers list to get the latest <br /> news and special offers.
                                 </p>
-                                <div className={`f-item newsletter ${formStyle}`}>
+                                {/* <div className={`f-item newsletter ${formStyle}`}>
                                     <FooterNewsLetter />
-                                </div>
+                                </div> */}
                                 <ul className="footer-social">
-                                    <SocialShare />
+                                    <SocialShare contact={contact} />
                                 </ul>
                             </div>
                         </div>
