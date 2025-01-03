@@ -3,8 +3,8 @@
         "id": 1,
         "bgThumb": "21.jpg",
         "title": "Meet Consulting",
-        "title1": "Financial Analysis",
-        "title2": "Developing Meeting.",
+        "title1": "Empowering Trade",
+        "title2": "Building Connections",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"
@@ -13,8 +13,8 @@
         "id": 2,
         "bgThumb": "22.jpg",
         "title": "Coaching & Consulting",
-        "title1": "Strategies for",
-        "title2": "Enduring Success",
+        "title1": "Global Solutions",
+        "title2": "Seamless Logistics",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"
@@ -23,8 +23,8 @@
         "id": 3,
         "bgThumb": "23.jpg",
         "title": "Coaching & Consulting",
-        "title1": "Strategies for",
-        "title2": "Enduring Success",
+        "title1": "Driving Excellence",
+        "title2": "Fostering Growth",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"
@@ -33,8 +33,8 @@
         "id": 4,
         "bgThumb": "24.jpg",
         "title": "Coaching & Consulting",
-        "title1": "Strategies for",
-        "title2": "Enduring Success",
+        "title1": "Quality Imports",
+        "title2": "Trusted Exports",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"
@@ -43,8 +43,8 @@
         "id": 5,
         "bgThumb": "25.jpg",
         "title": "Coaching & Consulting",
-        "title1": "Strategies for",
-        "title2": "Enduring Success",
+        "title1": "Innovative Trade",
+        "title2": "Sustainable Growth",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"
@@ -53,17 +53,18 @@
         "id": 6,
         "bgThumb": "26.jpg",
         "title": "Coaching & Consulting",
-        "title1": "Strategies for",
-        "title2": "Enduring Success",
+        "title1": "Reliable Service",
+        "title2": "Global Impact",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"
-    },  {
+    },
+    {
         "id": 7,
         "bgThumb": "27.jpg",
         "title": "Coaching & Consulting",
-        "title1": "Strategies for",
-        "title2": "Enduring Success",
+        "title1": "Efficient Trade",
+        "title2": "Tailored Solutions",
         "btnText": "Our Services",
         "shapeThumb": "4.png",
         "videoId": "owhuBrGIOsEdsk"

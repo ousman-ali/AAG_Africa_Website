@@ -10,13 +10,11 @@ const SingleBanner1 = ({ banner }) => {
             <div className="banner-thumb bg-cover shadow dark" style={{ background: `url(/assets/img/banner/${bgThumb})` }}></div>
             <div className="container">
                 <div className="row align-center">
-                    <div className="col-xl-7 offset-xl-5">
+                    <div className="col-xl-11 offset-xl-1">
                         <div className="content">
-                            <h4>{title}</h4>
+                            
                             <h2><strong>{title1}</strong> {title2}</h2>
-                            <div className="button mt-40">
-                                <Link className="btn-animation" href="/services"><i className="fas fa-arrow-right"></i> <span>{btnText}</span></Link>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

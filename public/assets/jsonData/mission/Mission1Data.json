@@ -2,46 +2,85 @@
     {
         "id": 1,
         "tabId": "tab1",
-        "heading1": "Financial security and",
-        "heading2": "protection for our clients",
-        "text": "A Promise of: Financial security and protection for our clients Commitment and fairness to our agents Respect and opportunity for our employees Increasing value and reward for teams.",
+        "heading1": "Bridging Global Markets with Integrity and Excellence",
+        "heading2": "",
+        "text": "",
         "tabClass": "show active",
         "ariaLabel": "nav-id-1",
         "listData": [
             {
                 "id": 1,
-                "listInfo": "Commitment and fairness"
+                "listInfo": "To build lasting relationships by providing high-quality products through reliable, efficient, and ethical trade practices."
             },
             {
                 "id": 2,
-                "listInfo": "Respect and opportunity for our employees"
+                "listInfo": "As a family-run business, we are committed to fostering growth, innovation, and trust in every aspect of our operations, ensuring customer satisfaction and sustainable success for generations to come."
             },
             {
                 "id": 3,
-                "listInfo": "Financial security and protection"
+                "listInfo": "To offer unparalleled import and export solutions that prioritize quality, efficiency, and integrity."
+            },
+            {
+                "id": 4,
+                "listInfo": "Rooted in the strong foundation of family collaboration, we aim to expand our global reach while maintaining personalized service and a deep commitment to sustainable business practices."
             }
         ]
     },
     {
         "id": 2,
         "tabId": "tab2",
-        "heading1": "Offer our customers",
-        "heading2": "the lowest possible prices",
-        "text": "A Promise of: Financial security and protection for our clients Commitment and fairness to our agents Respect and opportunity for our employees Increasing value and reward for teams.",
+        "heading1": "Empowering Businesses Through Seamless Trade Solutions",
+        "heading2": "",
+        "text": "",
         "tabClass": "",
         "ariaLabel": "nav-id-2",
         "listData": [
             {
                 "id": 1,
-                "listInfo": "Business document"
+                "listInfo": "To empower businesses worldwide by providing seamless trade solutions that foster growth, efficiency, and mutual success."
             },
             {
                 "id": 2,
-                "listInfo": "Strategic planning"
+                "listInfo": "We envision a future where our family business is synonymous with reliability, integrity, and transformative global trade practices."
             },
             {
                 "id": 3,
-                "listInfo": "Financial security and protection"
+                "listInfo": "To become a cornerstone in the global supply chain, facilitating connections that drive progress and innovation across industries."
+            },
+            {
+                "id": 4,
+                "listInfo": "Our vision is to inspire global commerce by cultivating partnerships that prioritize trust, excellence, and forward-thinking solutions."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "tabId": "tab3",
+        "heading1": "The Foundation of Trust, Quality, and Innovation",
+        "heading2": "",
+        "text": "",
+        "tabClass": "",
+        "ariaLabel": "nav-id-3",
+        "listData": [
+            {
+                "id": 1,
+                "listInfo": "Integrity: We operate with the highest level of professionalism, truthfulness, and nobility, ensuring trust in all interactions."
+            },
+            {
+                "id": 2,
+                "listInfo": "Innovation: By embracing new technologies, products, and ideas, we continuously seek innovative solutions to improve our business and benefit our customers."
+            },
+            {
+                "id": 3,
+                "listInfo": "Quality: A commitment to excellence drives us to deliver superior products and services that meet the highest standards, building lasting relationships based on reliability."
+            }
+            , {
+                "id": 4,
+                "listInfo": "Trust: Sincere and open communication ensures our clients can place their absolute confidence in us."
+            }
+            , {
+                "id": 5,
+                "listInfo": "Customer Focus: Our customers are at the heart of everything we do. We strive to understand their needs and exceed their expectations with exceptional service."
             }
         ]
     }

@@ -14,10 +14,10 @@ const Strategy = () => {
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-7">
                             <MissionTab1 />
                         </div>
-                        <div className="col-lg-5 offset-lg-1 mt-md-50 mt-xs-40">
+                        <div className="col-lg-4 offset-lg-1 mt-md-50 mt-xs-40">
                             <div className="faq-style-one secondary">
                                 <div className="accordion" id="faqAccordion">
                                     {Faq1Data.slice(0, 3).map(faq =>
