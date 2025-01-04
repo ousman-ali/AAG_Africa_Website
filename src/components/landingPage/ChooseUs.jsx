@@ -15,18 +15,30 @@ const ChooseUs = () => {
                     <div className="row">
                         <div className="col-lg-6 pr-80 pr-md-15 pr-xs-15">
                             <div className="choose-us-style-one">
-                                <h2 className="title mb-35">Be at the forefront of the new innovation</h2>
+                                <h2 className="title mb-35">Why Choose AAG Import and Export?</h2>
                                 <ul className="list-item">
                                     <li className="wow fadeInUp">
-                                        <h4>Best Business Consulting </h4>
+                                        <h4>Commitment to Quality </h4>
                                         <p>
-                                            Seeing rather her you not esteem men settle genius excuse. International Deal say over you age from. Comparison new ham melancholy son themselves.
+                                        We ensure every product meets the highest standards through rigorous quality control processes.
                                         </p>
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay="300ms">
-                                        <h4>24/7 Customer Support </h4>
+                                        <h4>Extensive Network</h4>
                                         <p>
-                                            Tohether rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son.
+                                        Our global partnerships enable us to source diverse, high-quality goods to meet your specific needs.
+                                        </p>
+                                    </li>
+                                    <li className="wow fadeInUp" data-wow-delay="300ms">
+                                        <h4>Experienced Team</h4>
+                                        <p>
+                                        With deep industry expertise, we provide seamless logistics and outstanding customer service.
+                                        </p>
+                                    </li>
+                                    <li className="wow fadeInUp" data-wow-delay="300ms">
+                                        <h4>Competitive Pricing</h4>
+                                        <p>
+                                        We deliver cost-effective solutions without compromising on quality or service.
                                         </p>
                                     </li>
                                 </ul>

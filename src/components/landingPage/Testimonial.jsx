@@ -53,9 +53,9 @@ const Testimonial = () => {
                                 autoplay={false}
                                 centeredSlides={true}
                                 initialSlide={1}
-                                slidesPerView={1}
+                                slidesPerView={2}
                                 loop={true}
-                                spaceBetween={50}
+                                spaceBetween={20}
                                 keyboard={{
                                     enabled: true,
                                 }}

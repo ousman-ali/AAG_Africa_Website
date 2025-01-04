@@ -17,7 +17,7 @@ const About1Card = () => {
                                     <CountUp enableScrollSpy end={98} delay={1} duration={2} /></div>
                                 <div className="operator">%</div>
                             </div>
-                            <span className="medium">Consulting Success</span>
+                            <span className="medium">Trading Success</span>
                         </div>
                     </li>
                     <li>

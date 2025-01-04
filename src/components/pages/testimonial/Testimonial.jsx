@@ -1,11 +1,33 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Autoplay, Keyboard, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Testimonial2Data from '@/assets/jsonData/testimonial/Testimonial2Data.json'
 import SingleTestimonial2 from './SingleTestimonial2';
 
 const Testimonial = () => {
+    const [testimonials, setTestimonialData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(
+                    `${process.env.NEXT_PUBLIC_API_URL}/api/testimonial-list`
+                );
+                setTestimonialData(data);
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching service data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <>
             <div className="testimonials-style-two-area bg-dark default-padding-top half-shape-light-bottom"
@@ -42,7 +64,7 @@ const Testimonial = () => {
                                 }}
                             >
                                 <div className="swiper-wrapper">
-                                    {Testimonial2Data.map(testimonial =>
+                                    {testimonials.map(testimonial =>
                                         <SwiperSlide key={testimonial.id}>
                                             <SingleTestimonial2 testimonial={testimonial} />
                                         </SwiperSlide>
