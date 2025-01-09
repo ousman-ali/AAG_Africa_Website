@@ -3,7 +3,7 @@ import React from 'react';
 import Faq1Data from '@/assets/jsonData/faq/Faq1Data.json';
 
 import Link from 'next/link';
-import handleSmoothScroll from '../utilities/handleSmoothScroll';
+import handleSmoothScroll from '../../utilities/handleSmoothScroll';
 import InnerCta from '@/components/landingPage/InnerCta';
 
 const ServiceDetails = ({ serviceInfo }) => {

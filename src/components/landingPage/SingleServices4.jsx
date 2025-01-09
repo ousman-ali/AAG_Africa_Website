@@ -17,7 +17,7 @@ const SingleServices4 = ({ service }) => {
                 <div className="thumb">
                     <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${service.banner}`} width={800} height={600} alt="Thumb" />
                     <div className="title">
-                        <Link href={`/services-details/${service.slug}`}>
+                        <Link href={`/service-details/${service.slug}`}>
 
                             <h4>{service.serviceName}</h4>
                         </Link>
@@ -26,7 +26,7 @@ const SingleServices4 = ({ service }) => {
                 <div className="info">
                     <p dangerouslySetInnerHTML={{ __html: truncateText(service.description, 120) }} />
                     <div className="button">
-                        <Link href={`/services-details/${service.slug}`}>Read more</Link>
+                        <Link href={`/service-details/${service.slug}`}>Read more</Link>
                         <div className="devider"></div>
                     </div>
                 </div>

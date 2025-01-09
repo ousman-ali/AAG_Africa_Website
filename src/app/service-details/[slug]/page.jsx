@@ -9,8 +9,8 @@ export const metadata = {
 
 const ServiceDetailsPage = ({ params }) => {
 
-    const { id } = params
-    const data = Services2Data.find(service => service.id === parseInt(id))
+    const { slug } = params
+    const data = Services2Data.find(service => service.id === parseInt(slug))
 
     return (
         <>
