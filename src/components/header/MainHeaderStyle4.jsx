@@ -5,7 +5,7 @@ import useStickyMenu from '../hooks/useStickyMenu';
 import useSubMenuToggle from '../hooks/useSubMenuToggle';
 import useSidebarMenu from '../hooks/useSidebarMenu';
 import Link from 'next/link';
-import logoLightSolid from "@/assets/img/logo-light-solid.png"
+import logoLightSolid from "@/assets/img/footer.jpg"
 import logoBlue from "@/assets/img/logo-blue.png"
 import Image from 'next/image';
 import useSidebarInfo from '../hooks/useSidebarInfo';

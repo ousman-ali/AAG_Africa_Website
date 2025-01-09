@@ -15,24 +15,8 @@ const Cta = () => {
                 <div className="container">
                     <div className="row align-center">
                         <div className="col-lg-6">
-                            <h2 className="title">Check your website’s <br /> SEO score free!</h2>
-                            <form className="seo-form mt-30" onSubmit={handleForm} >
-                                <div className="input">
-                                    <div className="row">
-                                        <div className="col-lg-5 col-md-6">
-                                            <div className="form-group">
-                                                <input className="form-control" placeholder="Web URL" name='url' type="url" autoComplete='off' required />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-7 col-md-6">
-                                            <div className="form-group">
-                                                <input className="form-control" placeholder="Email Address" type="email" autoComplete='off' required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit">Check</button>
-                            </form>
+                            <h2 className="title">Check Our Contacts <br /> To get Free Business Support!</h2>
+                            
                         </div>
                         <div className="col-lg-6 text-end">
                             <AchievementCounter2 />

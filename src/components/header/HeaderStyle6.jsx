@@ -7,7 +7,7 @@ import useStickyMenu from '../hooks/useStickyMenu';
 import useSubMenuToggle from '../hooks/useSubMenuToggle';
 import useSidebarMenu from '../hooks/useSidebarMenu';
 import logoBlue from "@/assets/img/logo-blue.png";
-import logoLightSolid from "@/assets/img/logo-light-solid.png";
+import logoLightSolid from "@/assets/img/footer.jpg";
 
 const HeaderStyle6 = () => {
 

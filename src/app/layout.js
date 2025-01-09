@@ -23,7 +23,7 @@ import { Manrope, Outfit } from "next/font/google";
 import HeaderStyle1 from '@/components/header/HeaderStyle1';
 import FooterStyle1 from '@/components/footer/FooterStyle1';
 import shape38 from '@/assets/img/shape/38.png';
-import logoLightSolid from '@/assets/img/logo-light-solid.png';
+import logoLightSolid from '@/assets/img/footer.jpg';
 const manrope = Manrope({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
 
