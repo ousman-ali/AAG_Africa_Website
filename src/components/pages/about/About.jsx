@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
-import anim1Thumb from '@/assets/img/shape/anim-1.png'
-import anim2Thumb from '@/assets/img/shape/anim-2.png'
+import Link from 'next/link';
 import anim3Thumb from '@/assets/img/shape/anim-3.png'
 import anim4Thumb from '@/assets/img/shape/anim-4.png'
 import aboutThumb from "@/assets/img/about/1.jpg"
-import signatureThumb from "@/assets/img/signature.png"
+
 import About1Card from './About1Card';
 
 const About = () => {
@@ -16,12 +15,18 @@ const About = () => {
                 <div className="container">
                     <div className="row">
                         <div className="about-style-one col-xl-6 col-lg-5">
-                            <div className="h4 sub-heading">Feel Valued & Rewarded</div>
-                            <h2 className="title mb-25">Finance Consulting for Challenging Times</h2>
-                            <p>
-                                We work to understand your issues and are driven to ask better questions in the pursuit of making work. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keep.
+                            <div className="h4 sub-heading">Who We Are?</div>
+                            <h2 className="title mb-25">AAG Import and Export</h2>
+                            <p style={{textAlign:"justify"}}>
+                            AAG Import and Export is a dynamic and family-founded international trading company based in Addis Ababa, Ethiopia. With a strong commitment to integrity, innovation, and customer satisfaction, AAG has positioned itself as a trusted name in the global import and export industry.
+
+
+
+
                             </p>
-                            
+                            <p style={{textAlign:"justify"}}>Founded by a father and son team, AAG began its journey with the vision of building a lasting family legacy through quality service and meaningful partnerships. What started as a modest import venture has grown into a multi-faceted operation, serving diverse industries and clients worldwide.</p>
+                            <p style={{textAlign:"justify"}}> AAG specializes in importing high-quality electric cars, construction vehicles, solar energy solutions, and custom orders like body kits, spare parts, furniture, and ceramics. The company also excels in exporting goods and ensuring smooth and efficient logistics for its clients.</p>
+                           <p style={{textAlign:"justify"}}>AAG provides a wide range of products, including modern electric cars, construction trucks, solar water heaters, solar panels, body kits for Land Cruisers, spare parts, and custom orders for household and office furniture as well as ceramics. The company is also known for its extensive network of suppliers and partners, which allows it to source high-quality products at competitive prices.</p>
                         </div>
                         <div className="about-style-one col-xl-5 offset-xl-1 col-lg-6 offset-lg-1">
                             <div className="about-thumb">
