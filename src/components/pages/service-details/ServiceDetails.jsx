@@ -4,6 +4,7 @@ import Faq1Data from '@/assets/jsonData/faq/Faq1Data.json';
 
 import Link from 'next/link';
 import handleSmoothScroll from '../utilities/handleSmoothScroll';
+import InnerCta from '@/components/landingPage/InnerCta';
 
 const ServiceDetails = ({ serviceInfo }) => {
     const { thumbFull, title } = serviceInfo
@@ -91,17 +92,7 @@ const ServiceDetails = ({ serviceInfo }) => {
                                     </div>
                                 </div>
 
-                                <div className="single-widget bg-dark quick-contact-widget text-light" style={{ backgroundImage: `url(/assets/img/shape/15.png)` }}>
-                                    <div className="content">
-                                        <h3>Need Help?</h3>
-                                        <p>
-                                            Speak with a human to filling out a form? call corporate office and we will connect you with a team member help.
-                                        </p>
-                                        <h2><a href="tel:+(012) 6679545">+(012) 6679545</a></h2>
-                                        <h4><a href="mailto:info@digital.com">info@digital.com</a></h4>
-                                        <Link className="btn mt-30 circle btn-sm btn-gradient" href="/contact-us">Contact Us</Link>
-                                    </div>
-                                </div>
+                                <InnerCta />
 
                                 
 

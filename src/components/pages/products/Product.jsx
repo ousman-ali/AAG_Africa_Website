@@ -5,6 +5,7 @@ import Project3Data from '@/assets/jsonData/project/Project3Data.json'
 import SingleProject3 from './SingleProject3';
 import { PhotoProvider } from 'react-photo-view';
 import axios from 'axios';
+import InnerCta from '@/components/landingPage/InnerCta';
 
 const Product = () => {
 
@@ -64,17 +65,7 @@ const Product = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="single-widget bg-dark quick-contact-widget text-light" style={{ backgroundImage: `url(/assets/img/shape/14.png)` }}>
-                                    <div className="content">
-                                        <h3>Need Help?</h3>
-                                        <p>
-                                            Speak with a human to filling out a form? call corporate office and we will connect you with a team member help.
-                                        </p>
-                                        <h2><a href="tel:+(012) 6679545">+(012) 6679545</a></h2>
-                                        <h4><a href="mailto:info@digital.com">info@digital.com</a></h4>
-                                        <Link className="btn mt-30 circle btn-sm btn-gradient" href="/contact-us">Contact Us</Link>
-                                    </div>
-                                </div>
+                                <InnerCta />
                             </div>
                             <div className="col-xl-8 col-lg-7 clo-md-12 gallery-content">
                                 <div className="magnific-mix-gallery gallery-masonary">
