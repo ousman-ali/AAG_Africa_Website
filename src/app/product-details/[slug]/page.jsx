@@ -1,26 +1,53 @@
 
-
-import React from 'react';
-import Services2Data from '@/assets/jsonData/services/Services2Data.json'
+"use client"
+import axios from "axios";
+import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import Services2Data from '@/assets/jsonData/services/Services2Data.json';
 import BreadCrumb from '@/components/breadCrumb/BreadCrumb';
-import ProductDetails from '@/components/pages/product-details/ProductDetails';
+import ServiceDetails from '@/components/pages/service-details/ServiceDetails';
+import BlogSingleWithSidebarContent from "@/components/pages/blog-details/BlogSingleWithSidebarContent";
+import ProductDetails from "@/components/pages/product-details/ProductDetails";
 
-export const metadata = {
-    title: "Consua - Consulting Business - Project Details"
-}
+const BlogDetailsPage = () => {
+    const [service, setService] = useState(null);
+  const [relatedServices, setRelatedServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { slug } = useParams();
+  
+  useEffect(() => {
+    if (!slug){
+    console.log(slug)
+    return;
+  }
 
-const ProjectDetailsPage = ({ params }) => {
+    const fetchServiceDetails = async () => {
+      try {
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products-list`);
+        const currentService = data.find((svc) => svc.slug === slug);
+        currentService.images = typeof currentService.images === 'string'
+          ? JSON.parse(currentService.images)
+          : currentService.images;
+        setService(currentService);
+        setRelatedServices(data.filter((svc) => svc.slug !== slug).slice(-6));
+      } catch (error) {
+        console.error("Error fetching services data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    const { id } = params
-    const data = Services2Data.find(project => project.id === parseInt(id))
+    fetchServiceDetails();
+  }, [slug]);
 
     return (
         <>
-            <BreadCrumb breadCrumb="Product-details" title="Product Details" />
-                <ProductDetails projectInfo={data} />
-            
+            <BreadCrumb breadCrumb={service?.eventName} title={service?.eventName} />
+           <ProductDetails serviceInfo={service} allServices={relatedServices}/>
         </>
     );
 };
 
-export default ProjectDetailsPage;
+export default BlogDetailsPage;

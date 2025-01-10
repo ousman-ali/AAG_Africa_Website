@@ -1,20 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import SocialShare from '../utilities/SocialShare';
-import BlogPostComments from './BlogPostComments';
-import BlogCommentForm from '../form/BlogCommentForm';
-import SearchWidget from '../widgets/SearchWidget';
-import RecentPostsWidget from '../widgets/RecentPostsWidget';
-import CategoryWidget from '../widgets/CategoryWidget';
-import GalleryWidget from '../widgets/GalleryWidget';
-import ArchiveWidget from '../widgets/ArchiveWidget';
-import FollowWidget from '../widgets/FollowWidget';
-import TagsWidget from '../widgets/TagsWidget';
-import team2Thumb from '@/assets/img/teams/2.jpg'
+import SocialShare from '../../utilities/SocialShare';
 
-const BlogSingleWithSidebarContent = ({ blogInfo }) => {
-    const { date, dateIcon, thumbFull, authorIcon, author } = blogInfo
+import SearchWidget from '@/components/widgets/SearchWidget';
+import RecentPostsWidget from '../../widgets/RecentPostsWidget';
+import CategoryWidget from '../../widgets/CategoryWidget';
+import GalleryWidget from '../../widgets/GalleryWidget';
+import ArchiveWidget from '../../widgets/ArchiveWidget';
+import FollowWidget from '../../widgets/FollowWidget';
+import TagsWidget from '../../widgets/TagsWidget';
+import team2Thumb from '@/assets/img/teams/2.jpg'
+import InnerCta from '@/components/landingPage/InnerCta';
+
+const BlogSingleWithSidebarContent = ({ serviceInfo, allServices }) => {
+    
 
     return (
         <>
@@ -26,24 +26,24 @@ const BlogSingleWithSidebarContent = ({ blogInfo }) => {
                                 <div className="blog-style-two item">
                                     <div className="blog-item-box">
                                         <div className="thumb">
-                                            <Link href="#"><Image src={`/assets/img/blog/${thumbFull}`} alt="Thumb" width={1900} height={995} /></Link>
+                                            <Link href="#"><Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${serviceInfo?.banner}`} alt="Thumb" width={1900} height={995} objectFit='cover' /></Link>
                                         </div>
                                         <div className="info">
                                             <div className="meta">
                                                 <ul>
-                                                    <li>
+                                                    {/* <li>
                                                         <Link href="#"><i className={dateIcon}></i> {date}</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="#"><i className={authorIcon}></i> {author}</Link>
-                                                    </li>
+                                                    </li> */}
                                                 </ul>
                                             </div>
-                                            <p>
-                                                Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.
+                                            <p dangerouslySetInnerHTML={{ __html: serviceInfo?.description }} > 
+                                               
                                             </p>
-                                            <p>
-                                                New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past. Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
+                                            <p dangerouslySetInnerHTML={{ __html: serviceInfo?.details }} >
+                                                
                                             </p>
                                             <blockquote>
                                                 Celebrated share of first to worse. Weddings and any opinions suitable smallest nay. Houses or months settle remove ladies appear. Engrossed suffering supposing he recommend do eagerness.
@@ -112,11 +112,7 @@ const BlogSingleWithSidebarContent = ({ blogInfo }) => {
                                 <aside>
                                     <SearchWidget />
                                     <RecentPostsWidget />
-                                    <CategoryWidget />
-                                    <GalleryWidget />
-                                    <ArchiveWidget />
-                                    <FollowWidget />
-                                    <TagsWidget />
+                                    <InnerCta />
                                 </aside>
                             </div>
 

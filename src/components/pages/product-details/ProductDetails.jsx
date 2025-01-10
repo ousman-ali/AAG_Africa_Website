@@ -5,8 +5,8 @@ import Faq1Data from '@/assets/jsonData/faq/Faq1Data.json';
 import Link from 'next/link';
 import handleSmoothScroll from '../utilities/handleSmoothScroll';
 
-const ProductDetails = ({ serviceInfo }) => {
-    const { thumbFull, title } = serviceInfo
+const ProductDetails = ({ serviceInfo, allService }) => {
+
 
     return (
         <>
@@ -16,34 +16,14 @@ const ProductDetails = ({ serviceInfo }) => {
                         <div className="row">
                             <div className="col-xl-8 col-lg-7 order-lg-last pl-50 pl-md-15 pl-xs-15">
                                 <div className="thumb">
-                                    <Image src={`/assets/img/service/${thumbFull}`} alt="Thumb" width={1460} height={782} />
+                                    <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${serviceInfo?.banner}`} alt="Thumb" width={1460} height={782} objectFit='cover' />
                                 </div>
-                                <h2>{title}</h2>
-                                <p>
-                                    We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled data structures manages data in technology.
+                                <h2>{serviceInfo?.title}</h2>
+                                <p dangerouslySetInnerHTML={{ __html: serviceInfo?.description }} >
+                                    
                                 </p>
-                                <div className="features mt-40 mt-xs-30 mb-30 mb-xs-20">
-                                    <div className="row">
-                                        <div className="col-lg-5 col-md-6">
-                                            <div className="content">
-                                                <h3>Included Services</h3>
-                                                <ul className="feature-list-item">
-                                                    <li>Consulting Service</li>
-                                                    <li>24/7 Alltime Supporting</li>
-                                                    <li>Marketing Service</li>
-                                                    <li>Expert Team Members</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-7 col-md-6 mt-xs-30">
-                                            <div className="content">
-                                                <h3>The Challange</h3>
-                                                <p>
-                                                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="features mt-10 mt-xs-30 mb-30 mb-xs-20">
+                                    <p dangerouslySetInnerHTML={{ __html: serviceInfo?.details }} />
                                 </div>
                                 <h3>What we do?</h3>
                                 <p>
