@@ -49,7 +49,22 @@ const BlogSingleWithSidebarContent = ({ serviceInfo, allServices }) => {
                                     </div>
                                 </div>
                                
-                                
+                                <div className="row">
+                                               {serviceInfo?.images?.slice(0,3).map((image, index) => (
+                                                 <div key={index} className="col-xl-4 col-md-6 single-item">
+                                                   <div className="blog-style-one">
+                                                     <div className="thumb">
+                                                       <Image
+                                                         src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${image}`}
+                                                         width={800}
+                                                         height={600}
+                                                         alt="Thumb"
+                                                       />
+                                                     </div>
+                                                   </div>
+                                                 </div>
+                                               ))}
+                                             </div> 
                             </div>
 
 
