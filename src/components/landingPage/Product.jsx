@@ -61,7 +61,7 @@ const Product = () => {
                                     <div className="col-lg-12 text-center">
                                         <div className="load-more-info secondary text-center mt-60">
                                             <p>
-                                                Are you interested to show more portfolios? <Link href="#" scroll={false}>Load More</Link>
+                                                Are you interested to show more products? <Link href="/product" scroll={false}>Load More</Link>
                                             </p>
                                         </div>
                                     </div>

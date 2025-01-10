@@ -12,7 +12,7 @@ const SingleProject3 = ({ project }) => {
                 <div className="gallery-style-three">
                     <div className="thumb">
                         <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${project.banner}`} width={800} height={200} alt="Thumb" />
-                        <Link href="#" className="item popup-gallery" scroll={false}>
+                        <Link href={`/product-details/${project.slug}`} className="item popup-gallery" scroll={false}>
                             <PhotoView src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${project.banner}`} alt="image">
                                 <span>
                                     <i className="fas fa-plus"></i>
@@ -23,7 +23,7 @@ const SingleProject3 = ({ project }) => {
                     <div className="overlay">
                         <div className="content">
                             {/* <span>{tags}</span> */}
-                            <h4><Link href="#">{project.title}</Link></h4>
+                            <h4><Link href={`/product-details/${project.slug}`}>{project.title}</Link></h4>
                         </div>
                     </div>
                 </div>
