@@ -4,9 +4,7 @@ import React from 'react';
 import Project2Data from '@/assets/jsonData/project/Project2Data.json'
 import BreadCrumb from '@/components/breadCrumb/BreadCrumb';
 
-export const metadata = {
-    title: "Consua - Consulting Business - Project Details"
-}
+
 
 const ProjectDetailsPage = ({ params }) => {
 

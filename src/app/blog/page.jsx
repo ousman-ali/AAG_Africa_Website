@@ -7,7 +7,7 @@ import React from 'react';
 const Blog3Column = () => {
     return (
         <>
-            <BreadCrumb breadCrumb="blog-3-column" title="Blog 3 Column" />
+            <BreadCrumb breadCrumb="Our News And Events" title="News And Events" />
                <Blog />
             
         </>
