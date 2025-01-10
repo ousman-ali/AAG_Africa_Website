@@ -14,7 +14,7 @@ const SingleBlog3Column = ({ blog }) => {
         <>
             <div className="blog-style-one">
                 <div className="thumb">
-                    <Link href={`blog-single-with-sidebar/${blog.slug}`}>
+                    <Link href={`blog-single/${blog.slug}`}>
                         <Image src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${blog.banner}`} width={800} height={600} alt="Thumb" />
                     </Link>
                 </div>
@@ -29,9 +29,9 @@ const SingleBlog3Column = ({ blog }) => {
                         </ul>
                     </div>
                     <h4>
-                        <Link href={`blog-single-with-sidebar/${blog.slug}`}>{blog.eventName}</Link>
+                        <Link href={`blog-single/${blog.slug}`}>{blog.eventName}</Link>
                     </h4>
-                    <Link href={`blog-single-with-sidebar/${blog.slug}`} className="btn-simple"><i className="fas fa-angle-right"></i>Read More</Link>
+                    <Link href={`blog-single/${blog.slug}`} className="btn-simple"><i className="fas fa-angle-right"></i>Read More</Link>
                 </div>
             </div>
         </>
