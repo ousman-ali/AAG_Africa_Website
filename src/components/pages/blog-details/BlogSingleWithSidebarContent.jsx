@@ -42,68 +42,13 @@ const BlogSingleWithSidebarContent = ({ serviceInfo, allServices }) => {
                                             <p dangerouslySetInnerHTML={{ __html: serviceInfo?.description }} > 
                                                
                                             </p>
-                                            <p dangerouslySetInnerHTML={{ __html: serviceInfo?.details }} >
+                                            <p dangerouslySetInnerHTML={{ __html: serviceInfo?.details }} />
                                                 
-                                            </p>
-                                            <blockquote>
-                                                Celebrated share of first to worse. Weddings and any opinions suitable smallest nay. Houses or months settle remove ladies appear. Engrossed suffering supposing he recommend do eagerness.
-                                            </blockquote>
-                                            <p>
-                                                Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past. Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
-                                            </p>
-                                            <h3>Conduct replied off led whether?</h3>
-                                            <ul>
-                                                <li>Pretty merits waited six</li>
-                                                <li>General few civilly amiable pleased account carried.</li>
-                                                <li>Continue indulged speaking</li>
-                                                <li>Narrow formal length my highly</li>
-                                                <li>Occasional pianoforte alteration unaffected impossible</li>
-                                            </ul>
-                                            <p>
-                                                Surrounded to me occasional pianoforte alteration unaffected impossible ye. For saw half than cold. Pretty merits waited six talked pulled you. Conduct replied off led whether any shortly why arrived adapted. Numerous ladyship so raillery humoured goodness received an. So narrow formal length my highly longer afford oh. Tall neat he make or at dull ye. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Iure, laudantium, tempore. Autem dolore repellat, omnis quam? Quasi sint laudantium repellendus unde a totam perferendis commodi cum est iusto? Minima, laborum.
-                                            </p>
+                                           
                                         </div>
                                     </div>
                                 </div>
-                                <div className="post-author">
-                                    <div className="thumb">
-                                        <Image src={team2Thumb} alt="Thumb" width={1900} height={995} />
-                                    </div>
-                                    <div className="info">
-                                        <h4><a href="#">Md Sohag</a></h4>
-                                        <p>
-                                            Grursus mal suada faci lisis Lorem ipsum dolarorit more ametion consectetur elit. Vesti at bulum nec at odio aea the dumm ipsumm ipsum that dolocons rsus mal suada and fadolorit to the consectetur elit. All the Lorem Ipsum generators on the Internet tend. Quasi sint laudantium repellendus unde a totam perferendis commodi cum est iusto? Minima, laborum.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="post-tags share">
-                                    <div className="tags">
-                                        <h4>Tags: </h4>
-                                        <a href="#">Algorithm</a>
-                                        <a href="$">Data science</a>
-                                    </div>
-
-                                    <div className="social">
-                                        <h4>Share:</h4>
-                                        <ul>
-                                            <SocialShare />
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="post-pagi-area">
-                                    <div className="post-previous">
-                                        <Link href="#">
-                                            <div className="icon"><i className="fas fa-angle-double-left"></i></div>
-                                            <div className="nav-title"> Previus Post <h5>Discovery incommode</h5></div>
-                                        </Link>
-                                    </div>
-                                    <div className="post-next">
-                                        <Link href="#">
-                                            <div className="nav-title">Next Post <h5>Discovery incommode</h5></div>
-                                            <div className="icon"><i className="fas fa-angle-double-right"></i></div>
-                                        </Link>
-                                    </div>
-                                </div>
+                               
                                 
                             </div>
 
@@ -111,7 +56,32 @@ const BlogSingleWithSidebarContent = ({ serviceInfo, allServices }) => {
                             <div className="sidebar col-xl-4 col-lg-5 col-md-12 mt-md-50 mt-xs-50">
                                 <aside>
                                     <SearchWidget />
-                                    <RecentPostsWidget />
+                                    <div className="sidebar-item recent-post">
+      <h4 className="title">Recent Posts</h4>
+      <ul>
+        {allServices.slice(0, 6).map((blog) => (
+          <li>
+          <div className="thumb">
+            <Link href={`/blog-single/${blog.slug}`}>
+              <Image
+                src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${blog.banner}`}
+                width={1900}
+                height={995}
+                alt="Thumb"
+              />
+            </Link>
+          </div>
+          <div className="info">
+            <div className="meta-title">
+              {/* Assuming blog has a 'postedDate' field */}
+              <span className="post-date">{blog.crated_at}</span>
+            </div>
+            <Link href={`/blog-single/${blog.slug}`}>{blog.eventName}</Link>
+          </div>
+        </li>
+        ))}
+      </ul>
+    </div>
                                     <InnerCta />
                                 </aside>
                             </div>
