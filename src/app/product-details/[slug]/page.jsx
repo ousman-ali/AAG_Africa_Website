@@ -12,40 +12,40 @@ import BlogSingleWithSidebarContent from "@/components/pages/blog-details/BlogSi
 import ProductDetails from "@/components/pages/product-details/ProductDetails";
 
 const BlogDetailsPage = () => {
-    const [service, setService] = useState(null);
-  const [relatedServices, setRelatedServices] = useState([]);
+  const [product, setProduct] = useState(null);
+  const [relatedProducts, setRelatedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { slug } = useParams();
-  
-  useEffect(() => {
-    if (!slug){
-    console.log(slug)
-    return;
-  }
 
-    const fetchServiceDetails = async () => {
+  useEffect(() => {
+    if (!slug) {
+      console.log(slug)
+      return;
+    }
+
+    const fetchProductDetails = async () => {
       try {
         const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products-list`);
-        const currentService = data.find((svc) => svc.slug === slug);
-        currentService.images = typeof currentService.images === 'string'
-          ? JSON.parse(currentService.images)
-          : currentService.images;
-        setService(currentService);
-        setRelatedServices(data.filter((svc) => svc.slug !== slug).slice(-6));
+        const currentProduct = data.find((svc) => svc.slug === slug);
+        currentProduct.images = typeof currentProduct.images === 'string'
+          ? JSON.parse(currentProduct.images)
+          : currentProduct.images;
+        setProduct(currentProduct);
+        setRelatedProducts(data.filter((svc) => (svc.slug !== slug && currentProduct.category_id === svc.category_id)).slice(-6));
       } catch (error) {
-        console.error("Error fetching services data:", error);
+        console.error("Error fetching product data:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchServiceDetails();
+    fetchProductDetails();
   }, [slug]);
 
     return (
         <>
-            <BreadCrumb breadCrumb={service?.eventName} title={service?.eventName} />
-           <ProductDetails serviceInfo={service} allServices={relatedServices}/>
+            <BreadCrumb breadCrumb={product?.title} title={product?.title} />
+           <ProductDetails productInfo={product} relatedProducts={relatedProducts} a/>
         </>
     );
 };
