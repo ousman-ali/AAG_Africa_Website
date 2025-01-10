@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import shape7 from "@/assets/img/shape/7.png";
 import Logo from "@/assets/img/footer.jpg";
-import logoLight from "@/assets/img/footer.jpg";
+import logoLight from "@/assets/img/logo/logo3.png";
 import Link from "next/link";
 import SocialShare from "../utilities/SocialShare";
 import axios from "axios";
@@ -52,7 +52,7 @@ const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
                 <div className="f-item about">
                   <Link href="/">
                     {logo ? (
-                      <Image className="logo" src={logo} alt="Logo" />
+                      <Image className="logo" src={logoLight} alt="Logo" />
                     ) : (
                       <Image className="logo" src={logoLight} alt="Logo" />
                     )}

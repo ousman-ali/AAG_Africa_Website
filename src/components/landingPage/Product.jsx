@@ -15,7 +15,7 @@ const Product = () => {
         const fetchData = async () => {
             try {
                 const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products-list`);
-                setProducts(data.slice(0, 3));
+                setProducts(data.slice(0, 6));
             } catch (error) {
                 console.error("Error fetching data:", error);
             } finally {
