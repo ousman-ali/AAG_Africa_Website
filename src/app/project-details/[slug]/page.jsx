@@ -1,5 +1,5 @@
 
-import ProjectDetailsContent from '@/components/project/ProjectDetailsContent';
+
 import React from 'react';
 import Project2Data from '@/assets/jsonData/project/Project2Data.json'
 import BreadCrumb from '@/components/breadCrumb/BreadCrumb';
@@ -14,7 +14,7 @@ const ProjectDetailsPage = ({ params }) => {
     return (
         <>
             <BreadCrumb breadCrumb="Project-details" title="Project Details" />
-                <ProjectDetailsContent projectInfo={data} />
+        
             
         </>
     );
