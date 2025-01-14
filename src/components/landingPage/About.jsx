@@ -18,14 +18,14 @@ const About = () => {
                             <div className="h4 sub-heading">Who We Are?</div>
                             <h2 className="title mb-25">AAG Africa</h2>
                             <p style={{textAlign:"justify"}}>
-                            AAG Africa is a dynamic and family-founded international trading company based in Addis Ababa, Ethiopia. With a strong commitment to integrity, innovation, and customer satisfaction, AAG has positioned itself as a trusted name in the global import and export industry.
+                            AAG Africa is a dynamic and family-founded international trading company based in Addis Ababa, Ethiopia. With a strong commitment to integrity, innovation, and customer satisfaction, AAG Africa has positioned itself as a trusted name in the global import and export industry.
 
 
 
 
                             </p>
-                            <p style={{textAlign:"justify"}}>Founded by a father and son team, AAG began its journey with the vision of building a lasting family legacy through quality service and meaningful partnerships. What started as a modest import venture has grown into a multi-faceted operation, serving diverse industries and clients worldwide.</p>
-                            <p style={{textAlign:"justify"}}> AAG specializes in importing high-quality electric cars, construction vehicles, solar energy solutions, and custom orders like body kits, spare parts, furniture, and ceramics. The company also excels in exporting goods and ensuring smooth and efficient logistics for its clients.</p>
+                            <p style={{textAlign:"justify"}}>Founded by a father and son team, AAG Africa began its journey with the vision of building a lasting family legacy through quality service and meaningful partnerships. What started as a modest import venture has grown into a multi-faceted operation, serving diverse industries and clients worldwide.</p>
+                            <p style={{textAlign:"justify"}}> AAG Africa specializes in importing high-quality electric cars, construction vehicles, solar energy solutions, and custom orders like body kits, spare parts, furniture, and ceramics. The company also excels in exporting goods and ensuring smooth and efficient logistics for its clients.</p>
                             <div className="button mt-40">
                                 <Link className="btn-animation" href="/about-us"><i className="fas fa-arrow-right"></i> <span>Read More</span></Link>
                             </div>

@@ -4,7 +4,7 @@ import React from 'react';
 import shapeThumb from '@/assets/img/shape/4.png';
 
 const SingleBanner1 = ({ banner }) => {
-    const { title, file, btnText } = banner; // Removed extra comma and corrected destructuring
+    const { title, file } = banner; // Removed extra comma and corrected destructuring
 
     return (
         <>
@@ -17,11 +17,7 @@ const SingleBanner1 = ({ banner }) => {
                     <div className="col-xl-11 offset-xl-1">
                         <div className="content">
                             <h2><strong>{title}</strong></h2>
-                            {/* {btnText && (
-                                <Link href="/some-path">
-                                    <a className="btn btn-primary">{btnText}</a>
-                                </Link>
-                            )} */}
+                          
                         </div>
                     </div>
                 </div>

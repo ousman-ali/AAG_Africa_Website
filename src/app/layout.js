@@ -28,7 +28,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AAG Website"
+  title: "AAG Africa Website"
 }
 
 export default function RootLayout({ children }) {
