@@ -7,7 +7,7 @@ import useStickyMenu from '../hooks/useStickyMenu';
 import useSubMenuToggle from '../hooks/useSubMenuToggle';
 import useSidebarMenu from '../hooks/useSidebarMenu';
 import Image from 'next/image';
-import logo from '@/assets/img/logo/logo10.png';
+import logo from '@/assets/img/logo/logo.png';
 
 const MainHeaderStyle1 = () => {
 

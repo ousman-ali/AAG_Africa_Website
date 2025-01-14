@@ -1,11 +1,16 @@
 "use client";
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import SingleBanner1 from './SingleBanner1';
 import Banner1Data from '@/assets/jsonData/banner/Banner1Data.json';
 
 const Banner = () => {
+    const [banner, setBanner]=useState([]);
+    const [loading, setLoading]=useState([]);
+
+    useEffect
     return (
         <>
             <div className="banner-area banner-style-one shadow navigation-custom-large zoom-effect overflow-hidden text-light">
