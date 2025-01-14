@@ -16,9 +16,9 @@ const About = () => {
                     <div className="row">
                         <div className="about-style-one col-xl-6 col-lg-5">
                             <div className="h4 sub-heading">Who We Are?</div>
-                            <h2 className="title mb-25">AAG Import and Export</h2>
+                            <h2 className="title mb-25">AAG Africa</h2>
                             <p style={{textAlign:"justify"}}>
-                            AAG Import and Export is a dynamic and family-founded international trading company based in Addis Ababa, Ethiopia. With a strong commitment to integrity, innovation, and customer satisfaction, AAG has positioned itself as a trusted name in the global import and export industry.
+                            AAG Africa is a dynamic and family-founded international trading company based in Addis Ababa, Ethiopia. With a strong commitment to integrity, innovation, and customer satisfaction, AAG has positioned itself as a trusted name in the global import and export industry.
 
 
 

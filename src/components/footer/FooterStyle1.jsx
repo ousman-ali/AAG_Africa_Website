@@ -58,7 +58,7 @@ const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
                     )}
                   </Link>
                   <p style={{textAlign: 'justify'}}>
-                  AAG Import and Export bridges global markets with a commitment to quality, integrity, and innovation. We specialize in delivering high-quality products and reliable services, empowering our clients and fostering sustainable growth. 
+                  AAG Africa bridges global markets with a commitment to quality, integrity, and innovation. We specialize in delivering high-quality products and reliable services, empowering our clients and fostering sustainable growth. 
                   </p>
                 </div>
               </div>

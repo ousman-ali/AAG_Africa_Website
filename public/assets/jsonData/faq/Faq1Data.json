@@ -5,9 +5,9 @@
         "btnClass": "",
         "collapseTarget": "collapseOne",
         "expanded": "true",
-        "title": "What types of products does AAG Import and Export specialize in?",
+        "title": "What types of products does AAG Africa specialize in?",
         "textClass": "show",
-        "text": "AAG Import and Export specializes in a diverse range of products, including electric cars, construction vehicles, solar water heaters, solar panels, body kits for Land Cruisers, spare parts, household and office furniture, and ceramics. We also cater to custom orders based on our clients' specific needs."
+        "text": "AAG Africa specializes in a diverse range of products, including electric cars, construction vehicles, solar water heaters, solar panels, body kits for Land Cruisers, spare parts, household and office furniture, and ceramics. We also cater to custom orders based on our clients' specific needs."
     },
     {
         "id": 2,
@@ -25,7 +25,7 @@
         "btnClass": "collapsed",
         "collapseTarget": "collapseThree",
         "expanded": "false",
-        "title": "Can AAG Import and Export handle special or custom orders?",
+        "title": "Can AAG Africa handle special or custom orders?",
         "textClass": "",
         "text": "Yes, we are happy to accommodate special or custom orders. Whether it’s a specific body kit, furniture design, or other unique requirements, our experienced team works closely with trusted suppliers to deliver tailored solutions that meet your exact specifications."
     },

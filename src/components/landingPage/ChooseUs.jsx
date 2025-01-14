@@ -15,7 +15,7 @@ const ChooseUs = () => {
                     <div className="row">
                         <div className="col-lg-6 pr-80 pr-md-15 pr-xs-15">
                             <div className="choose-us-style-one">
-                                <h2 className="title mb-35">Why Choose AAG Import and Export?</h2>
+                                <h2 className="title mb-35">Why Choose AAG Africa?</h2>
                                 <ul className="list-item">
                                     <li className="wow fadeInUp">
                                         <h4>Commitment to Quality </h4>

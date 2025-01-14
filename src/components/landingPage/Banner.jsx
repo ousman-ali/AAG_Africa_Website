@@ -10,7 +10,17 @@ const Banner = () => {
     const [banner, setBanner]=useState([]);
     const [loading, setLoading]=useState([]);
 
-    useEffect
+    useEffect(() => { 
+        const fetchData = async () => {
+            setLoading(true);
+            const response = await axios.get(
+                `${process.env.NEXT_PUBLIC_API_URL}/api/hero_list`
+            );
+            setBanner(response.data);
+            setLoading(false);
+        }
+        fetchData();
+    }, []);
     return (
         <>
             <div className="banner-area banner-style-one shadow navigation-custom-large zoom-effect overflow-hidden text-light">
@@ -33,7 +43,7 @@ const Banner = () => {
                         }}
                     >
                         <div className="swiper-wrapper">
-                            {Banner1Data.map(banner =>
+                            {banner.map(banner =>
                                 <SwiperSlide key={banner.id} className='banner-style-one'>
                                     <SingleBanner1 banner={banner} />
                                 </SwiperSlide>
