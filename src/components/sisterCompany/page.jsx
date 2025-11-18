@@ -72,7 +72,7 @@ const SisterCompanies = () => {
           const isExpanded = expanded[company.id] ?? false;
           const description = company.description || "";
           const cleanedDescription = stripHtml(description);
-          const cleanedShortText = cleanedDescription.slice(0, 60);
+          const cleanedShortText = cleanedDescription.slice(0, 100);
 
           return (
             <div className="col-md-6 mb-4" key={company.id}>
@@ -142,12 +142,12 @@ const SisterCompanies = () => {
                       <Image
                         src={baseURL + company.logo}
                         alt="Logo"
-                        width={80}
-                        height={80}
+                        width={120}
+                        height={120}
                         className="rounded-circle border border-3 border-light shadow"
                         style={{
-                          width: "80px",
-                          height: "80px",
+                          width: "120px",
+                          height: "120px",
                           objectFit: "cover",
                           borderRadius: "50%",
                         }}
@@ -226,7 +226,7 @@ const SisterCompanies = () => {
                       ? cleanedDescription + " "
                       : cleanedShortText + "..."}
 
-                    {cleanedDescription.length > 60 && (
+                    {cleanedDescription.length > 100 && (
                       <button
                         className="p-0 m-0 border-0 bg-transparent text-info small"
                         style={{ cursor: "pointer" }}
