@@ -13,10 +13,6 @@ export default {
   },
 
   images: {
-    domains: [
-      "testapi.nascontradingplc.com", // production
-      "localhost", // local backend
-      "127.0.0.1", // alternative local backend
-    ],
+    domains: ["api.aagafrica.net"],
   },
 };

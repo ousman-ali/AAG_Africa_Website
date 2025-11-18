@@ -22,7 +22,7 @@ const SisterCompanies = () => {
     const getCompanies = async () => {
       try {
         const res = await fetch(
-          "http://localhost:8000/api/sister-companies-list"
+          `${process.env.NEXT_PUBLIC_API_URL}/api/sister-companies-list`
         );
         const data = await res.json();
         setCompanies(data);
@@ -47,10 +47,15 @@ const SisterCompanies = () => {
     setMaxImageHeight(Math.max(...imageHeights));
   }, [companies]);
 
-  const baseURL = "http://localhost:8000/storage/";
+  const baseURL = `${process.env.NEXT_PUBLIC_API_URL}/storage/`;
 
   const toggleReadMore = (id) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const stripHtml = (html) => {
+    if (!html) return "";
+    return html.replace(/<[^>]+>/g, "");
   };
 
   return (
@@ -66,7 +71,8 @@ const SisterCompanies = () => {
         {companies.map((company, index) => {
           const isExpanded = expanded[company.id] ?? false;
           const description = company.description || "";
-          const shortText = description.slice(0, 60);
+          const cleanedDescription = stripHtml(description);
+          const cleanedShortText = cleanedDescription.slice(0, 60);
 
           return (
             <div className="col-md-6 mb-4" key={company.id}>
@@ -139,6 +145,12 @@ const SisterCompanies = () => {
                         width={80}
                         height={80}
                         className="rounded-circle border border-3 border-light shadow"
+                        style={{
+                          width: "80px",
+                          height: "80px",
+                          objectFit: "cover",
+                          borderRadius: "50%",
+                        }}
                       />
                     </div>
                   )}
@@ -210,9 +222,11 @@ const SisterCompanies = () => {
                       textAlign: "justify",
                     }}
                   >
-                    {isExpanded ? description + " " : shortText + "..."}
+                    {isExpanded
+                      ? cleanedDescription + " "
+                      : cleanedShortText + "..."}
 
-                    {description.length > 60 && (
+                    {cleanedDescription.length > 60 && (
                       <button
                         className="p-0 m-0 border-0 bg-transparent text-info small"
                         style={{ cursor: "pointer" }}
